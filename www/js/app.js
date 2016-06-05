@@ -33,10 +33,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
 
   // setup an abstract state for the tabs directive
   .state('tab', {
-    url: '/tabs',
+    url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html',
-    controller: 'LoginCtrl'
+    templateUrl: 'templates/tabs.html'
   })
   .state('login', {
     url: '/login',
@@ -45,15 +44,15 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
   })
 
   // Each tab has its own nav history stack:
-      .state('tab.dash', {
-        url: '/dash',
-        views: {
-          'tab-dash': {
-            templateUrl: 'app/loans/index-loans.html',
-            controller: 'DashCtrl'
-          }
-        }
-      })
+  .state('tab.dash', {
+    url: '/dash',
+    views: {
+      'tab-dash': {
+        templateUrl: 'app/loans/index-loans.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',

@@ -5,20 +5,28 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
+  <!-- Loans Tab -->
+  <ion-tab title="Préstamos" icon-off="ion-cash" icon-on="ion-cash-strong" href="#/tab/loan">
+    <ion-nav-view name="tab-loan"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Payments Tab -->
+  <ion-tab title="Tarjetas" icon-off="ion-card" icon-on="ion-card" href="#/tab/payments">
+    <ion-nav-view name="tab-payments"></ion-nav-view>
+  </ion-tab>
+
+  <!-- dailyExpenses Tab -->
+  <ion-tab title="Gastos" icon-off="ion-pricetags" icon-on="ion-pricetags" href="#/tab/dailyExpenses">
+    <ion-nav-view name="tab-dailyExpenses"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Sync Tab -->
+  <ion-tab title="Sincronizar" icon-off="ion-ios-cloud-upload-outline" icon-on="ion-ios-cloud-upload-outline" href="#/tab/dailyExpenses">
+    <ion-nav-view name="tab-dailyExpenses"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Configuración" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/dash">
     <ion-nav-view name="tab-dash"></ion-nav-view>
   </ion-tab>
-
-  <!-- Chats Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
-
 
 </ion-tabs>

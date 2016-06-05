@@ -5,6 +5,22 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
   <body>
-    hola
+    <ion-header-bar class="bar-stable">
+    <h1 class="title">Service Provider Details</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="row header">
+      <div class="col">Cliente</div>
+      <div class="col">Dirección</div>
+      <div class="col">Teléfono</div>
+      <div class="col"></div>
+    </div>
+    <div class="row" ng-repeat="data in ctrl.data">
+      <div class="col">{{customer.name}}</div>
+      <div class="col">{{customer.address}}</div>
+      <div class="col">LK {{customer.phone}}</div>
+      <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
+    </div>
+</ion-content>
   </body>
 </html>
