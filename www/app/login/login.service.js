@@ -31,32 +31,4 @@
             }
         }
     })
-
-
-
-/*
-    .factory('LoginService', LoginService);
-
-  LoginService.$inject = [];
-
-  /**
-   * @namespace loginservice
-   * @memberOf login
-   */
-   /*
-  function LoginService() {
-    var service = {
-      validateCredentials: __validateCredentials
-    };
-
-    return service;
-
-    function __validateCredentials(data) {
-      if(data.username==="vivi" && data.password === "farfan"){
-        return {success:"true",data:{},message:"Bienvenido"};
-      }
-      return {success:"false",data:{},message:"Datos errados"};
-    }
-
-  }*/
 })();

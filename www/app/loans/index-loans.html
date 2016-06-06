@@ -4,6 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
+    <style>
+    body {
+        cursor: url('http://ionicframework.com/img/finger.png'), auto;
+    }
+
+    .header .col {
+        background-color:lightgrey;
+    }
+
+    .col {
+        border: solid 1px grey;
+        border-bottom-style: none;
+        border-right-style: none;
+    }
+
+    .col:last-child {
+        border-right: solid 1px grey;
+    }
+
+    .row:last-child .col {
+        border-bottom: solid 1px grey;
+    }
+    </style>
   <body>
     <ion-header-bar class="bar-stable">
     <h1 class="title">Service Provider Details</h1>
@@ -15,11 +38,11 @@
       <div class="col">Teléfono</div>
       <div class="col"></div>
     </div>
-    <div class="row" ng-repeat="data in ctrl.data">
+    <div class="row" ng-repeat="customer in loans.customerList">
       <div class="col">{{customer.name}}</div>
       <div class="col">{{customer.address}}</div>
-      <div class="col">LK {{customer.phone}}</div>
-      <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
+      <div class="col">{{customer.phone}}</div>
+      <div class="col"><button class="button" ng-click="loans.customerEdit($index)">Ver</button></div>
     </div>
 </ion-content>
   </body>

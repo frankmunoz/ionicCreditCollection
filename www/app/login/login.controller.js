@@ -10,7 +10,7 @@
     .module('app')
     .controller('LoginCtrl', LoginCtrl);
 
-  LoginCtrl.$inject = ['$scope','LoginService','$state','$ionicPopup'];
+  LoginCtrl.$inject = ['$scope', 'LoginService', '$ionicPopup', '$state'];
 
   /**
    * @namespace LoginCtrl
@@ -18,7 +18,7 @@
    * @param {Object[]} Dependencies
    * @memberOf Login.Controller
    */
-  function LoginCtrl($scope,LoginService,$state,$ionicPopup) {
+  function LoginCtrl($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
     $scope.login = login;
     activate();
@@ -27,23 +27,14 @@
     }
 
     function login() {
-           LoginService.validateCredentials($scope.data).success(function(data) {
-               $state.go('tab.dash');
-           }).error(function(data) {
-               var alertPopup = $ionicPopup.alert({
-                   title: 'Login failed!',
-                   template: 'Please check your credentials!'
-               });
-           });
-       }
-
-
-    function loginOLD() {
-      var response = LoginService.validateCredentials($scope.data);
-      if(response.success){
-        $state.go('tab.dash');
-      }
-      console.log(response);
+      LoginService.validateCredentials($scope.data).success(function(data) {
+       $state.go('tab.loan');
+      }).error(function(data) {
+       var alertPopup = $ionicPopup.alert({
+         title: 'Login failed!',
+         template: 'Please check your credentials!'
+       });
+      });
     }
   }
 })();
